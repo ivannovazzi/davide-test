@@ -14,7 +14,7 @@
 import { createProxyMiddleware } from "http-proxy-middleware";
  
 const apiProxy = createProxyMiddleware({
-  target: "https://example.org",
+  target: "https://cdn.cadcrowd.com/3d-models/21/28/2128bb3c-d673-4031-a08a-1df6d8105930/viewer/50553642-b5b5-44bd-ae12-c60a4799abe7/wolvic_3d_model.glb",
   changeOrigin: true,
   pathRewrite: {
     "^/api": "", // strip "/api" from the URL
