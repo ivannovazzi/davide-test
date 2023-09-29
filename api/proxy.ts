@@ -1,8 +1,8 @@
 const httpProxy = require('http-proxy');
  
-httpProxy.createProxyServer({target:'https://google.com'});
 
 export default function handler(req, res) {
+  httpProxy.createProxyServer({target:'https://google.com'});
   // res.statusCode = 200;
   // res.setHeader('Content-Type', 'application/json');
   // res.json({ name: 'John Doe' });
