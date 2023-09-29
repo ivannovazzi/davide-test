@@ -38,11 +38,11 @@ async function init(): Promise<THREE.Scene> {
 }
 
 function loadModel(scene: THREE.Scene) {
-  const link = "https://cdn.cadcrowd.com/3d-models/21/28/2128bb3c-d673-4031-a08a-1df6d8105930/viewer/bf6c0785-ef94-42e7-9bba-fc3d41e050be/low_poly_desert_builing.glb";
+  const link = "https://cdn.cadcrowd.com/3d-models/21/28/2128bb3c-d673-4031-a08a-1df6d8105930/viewer/50553642-b5b5-44bd-ae12-c60a4799abe7/wolvic_3d_model.glb";
   loader.load(link, function ( gltf ) {
     scene.add( gltf.scene );
     // now it scales the model down a factor of 100
-    gltf.scene.scale.set(0.01, 0.01, 0.01);
+    // gltf.scene.scale.set(0.01, 0.01, 0.01);
     // now starts an animation loop that rotates the model continously
     gltf.scene.rotation.y = 0.5;
     gltf.scene.rotation.x = 0.5;
