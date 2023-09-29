@@ -11,7 +11,7 @@
 //
 // You can/should update the proxy to suit your needs.
 // See https://github.com/chimurai/http-proxy-middleware for more details.
-const { createProxyMiddleware } = require("http-proxy-middleware");
+import { createProxyMiddleware } from "http-proxy-middleware";
  
 const apiProxy = createProxyMiddleware({
   target: "https://example.org",
@@ -27,5 +27,6 @@ const apiProxy = createProxyMiddleware({
  
 // Expose the proxy on the "/api/*" endpoint.
 export default function handler(req, res) {
+  // @ts-ignore
   return apiProxy(req, res);
 }
